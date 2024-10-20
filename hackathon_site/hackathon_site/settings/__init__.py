@@ -322,7 +322,7 @@ EVENT_END_DATE = datetime(2024, 10, 27, 17, 0, 0, tzinfo=TZ_INFO)
 HARDWARE_SIGN_OUT_START_DATE = datetime(2024, 10, 28, 23, 59, 0, tzinfo=TZ_INFO)
 HARDWARE_SIGN_OUT_END_DATE = EVENT_END_DATE
 
-RSVP_DAYS = 10
+RSVP_DAYS = 2
 
 # sign in times must be between EVENT_START_DATE and EVENT_END_DATE and in chronological order
 # the number of sign in times MUST MATCH the number of columns in UserActivityTable
@@ -374,16 +374,15 @@ WAITLISTED_ACCEPTANCE_START_TIME = EVENT_START_DATE + timedelta(hours=1)
 FINAL_REVIEW_RESPONSE_DATE = REGISTRATION_CLOSE_DATE + timedelta(days=7)
 
 # Links
-# TODO: NEED TO REPLACE THIS WITH NEW LINK (for acceptance email)
-PARTICIPANT_PACKAGE_LINK = "https://docs.google.com/document/d/1AkinPac_KS9_wA9P7H-7wOBfJ5xgIciIGwpU3D1UGu0/edit?usp=sharing"
+PARTICIPANT_PACKAGE_LINK = "https://docs.google.com/document/d/1AmgarLDeE8e8oirdG-uY-fdyOwfUomhA4jjU6o-Q2MM/edit?usp=sharing"
 
 # Note this is in the form (chat_room_name, chat_room_link)
 # Chat room name is such as the following: Slack, Discord
-# TODO: NEED TO REPLACE THIS WITH NEW LINK (for acceptance email)
-CHAT_ROOM = ("Discord", "https://discord.gg/cqW93CMu")
+CHAT_ROOM = ("Discord", "https://discord.gg/TQZ7aCs24r")
 
 # Enable/Disable certain Features
 TEAMS = True
+RSVP = True
 
 # HSS Testing
 TEST_USER_GROUP = "HSS Test Users"
