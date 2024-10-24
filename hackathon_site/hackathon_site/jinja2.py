@@ -11,6 +11,7 @@ from hackathon_site.utils import (
     get_sign_in_interval,
     get_curr_sign_in_time,
 )
+
 # In testing, nothing in this file can be overwritten using the
 # @patch or @override_settings decorators, because it is evaluated before
 # the test methods. If you have tests that rely on these values, explicitly
