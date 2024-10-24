@@ -73,10 +73,10 @@
                         {% if (application.rsvp and using_rsvp) or not using_rsvp %}
                             <p>Make sure you read the <a class="primaryText hoverLink" href="{{ participant_package_link }}" rel="noopener" target="_blank">participant package</a> for all the info regarding
                                 the event, and join our <a class="primaryText hoverLink" href="{{ chat_room_link }}" rel="noopener" target="_blank">{{ chat_room_name }}</a>. Stay tuned for more updates regarding detailed event logistics, and we hope to see you soon!</p> <br />
-                            <!-- TODO QR SCANNER CODE: <div style="margin-bottom: 15px; display: flex; flex-direction: column; align-items: center">
+                            <div style="margin-bottom: 15px; display: flex; flex-direction: column; align-items: center">
                                 <p>Please show the QR code below to the front desk to sign-in. .</p>
                                 <canvas id="qrcode" style="width: 150px; height: 150px; margin: 10px auto"></canvas>
-                            </div> -->
+                            </div>
                         {% endif %}
                         <p>If you have questions, read the <a class="primaryText hoverLink" href="#faq">FAQ</a>, or feel free to contact us.</p> <br />
 
@@ -116,8 +116,8 @@
                         <p>The {{ hackathon_name }} team has reviewed your application, and have decided not to grant you a guaranteed spot
                             at {{ hackathon_name }} and to place you in our waitlist. On {{ waitlisted_acceptance_start_time.strftime("%B %-d, %Y, at %-I:%M %p") }}, we will begin allowing
                             people from the waitlist into the event on a first-come, first-serve basis if there is still room. We offer no
-                            guarantee that you will be allowed into the event, regardless of how early you arrive. Please read our
-                            <a class="primaryText hoverLink" href="{{ participant_package_link }}" rel="noopener" target="_blank">participant package</a> for all the info regarding the event if you plan on
+                            guarantee that you will be allowed into the event, regardless of how early you arrive. Please read our 
+                            <a class="primaryText hoverLink" href="{{ participant_package_link }}" rel="noopener" target="_blank">participant package</a> for all the info regarding the event if you plan on 
                             waiting to see if any spots become available.
                         </p> <br />
                         <p>If you have questions, read the <a class="primaryText hoverLink" href="#faq">FAQ</a>, or feel free to contact us.</p> <br />
@@ -163,4 +163,15 @@
         </div>
     </div>
 </div>
+{% endblock %}
+
+{% block scripts %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+    <script type="text/javascript">
+        var qrcode = new QRious({
+            element: document.getElementById("qrcode"),
+            value: "{{ user.first_name }};{{ user.last_name }};{{ user.email }}",
+            size: 150,
+        });
+    </script>
 {% endblock %}

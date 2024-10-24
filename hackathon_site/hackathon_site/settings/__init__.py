@@ -317,7 +317,7 @@ HSS_ADMIN_EMAIL = "hardware@newhacks.ca"
 REGISTRATION_OPEN_DATE = datetime(2024, 1, 18, 0, 0, 0, tzinfo=TZ_INFO)
 REGISTRATION_CLOSE_DATE = datetime(2024, 10, 16, 23, 59, 0, tzinfo=TZ_INFO)
 APPLICATION_OPEN_DATE = datetime(2024, 9, 26, 0, 0, 0, tzinfo=TZ_INFO)
-EVENT_START_DATE = datetime(2024, 10, 26, 8, 0, 0, tzinfo=TZ_INFO)
+EVENT_START_DATE = datetime(2024, 10, 20, 8, 0, 0, tzinfo=TZ_INFO)
 EVENT_END_DATE = datetime(2024, 10, 27, 17, 0, 0, tzinfo=TZ_INFO)
 HARDWARE_SIGN_OUT_START_DATE = datetime(2024, 10, 28, 23, 59, 0, tzinfo=TZ_INFO)
 HARDWARE_SIGN_OUT_END_DATE = EVENT_END_DATE
@@ -331,7 +331,7 @@ SIGN_IN_TIMES = [
     {
         "name": "sign_in",
         "description": "Hackathon Sign In",
-        "time": datetime(2023, 11, 4, 10, 0, 0, tzinfo=TZ_INFO),  # Nov 4th @ 9am
+        "time": datetime(2024, 10, 23, 22, 0, 0, tzinfo=TZ_INFO),  # Nov 4th @ 9am
     },
     {
         "name": "lunch1",
