@@ -264,6 +264,12 @@ class QRScannerView(LoginRequiredMixin, FormView):
                     + application.tshirt_size
                     + " 🍉 Dietary Restrictions: "
                     + application.dietary_restrictions
+                    + (
+                        " 🥗 Specific Dietary Requirement: "
+                        + application.free_response_dietary_restrictions
+                        if application.free_response_dietary_restrictions
+                        else ""
+                    )
                 )
 
                 messages.success(self.request, return_string)
