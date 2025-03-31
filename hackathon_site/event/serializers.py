@@ -1,5 +1,3 @@
-import datetime
-
 from django.contrib.auth.models import Group
 from django.core.exceptions import ObjectDoesNotExist
 from django.conf import settings
@@ -104,7 +102,6 @@ class CurrentProfileSerializer(ProfileSerializer):
             .user.groups.filter(name=settings.TEST_USER_GROUP)
             .exists()
         )
-
         if not is_test_user:
             try:
                 rsvp_status = Application.objects.get(user=current_user).rsvp
@@ -118,8 +115,10 @@ class CurrentProfileSerializer(ProfileSerializer):
                 )
 
             try:
-                review = Review.objects.get(application__user=current_user)
-                if review.status != "Accepted":
+                review_status = Review.objects.get(
+                    application__user=current_user
+                ).status
+                if review_status != "Accepted":
                     raise serializers.ValidationError(
                         f"User has not been accepted to participate in {settings.HACKATHON_NAME}"
                     )
@@ -169,14 +168,6 @@ class TeamSerializer(serializers.ModelSerializer):
     class Meta:
         model = Team
         fields = (
-            "id",
-            "team_code",
-            "created_at",
-            "updated_at",
-            "profiles",
-            "project_description",
-        )
-        read_only_fields = (
             "id",
             "team_code",
             "created_at",

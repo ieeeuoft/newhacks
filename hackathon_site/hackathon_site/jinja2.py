@@ -1,10 +1,16 @@
+from django.contrib import messages
 from django.contrib.staticfiles.storage import staticfiles_storage
 from django.conf import settings
 from django.urls import reverse
 from django.utils.timezone import template_localtime
 from jinja2 import Environment
 
-from hackathon_site.utils import is_registration_open
+from hackathon_site.utils import (
+    is_application_open,
+    is_registration_open,
+    get_sign_in_interval,
+    get_curr_sign_in_time,
+)
 
 # In testing, nothing in this file can be overwritten using the
 # @patch or @override_settings decorators, because it is evaluated before
@@ -21,11 +27,16 @@ def environment(**options):
             "url": reverse,
             "localtime": template_localtime,
             "is_registration_open": is_registration_open,
+            "get_messages": messages.get_messages,
+            "get_sign_in_interval": get_sign_in_interval,
+            "get_curr_sign_in_time": get_curr_sign_in_time,
+            "is_application_open": is_application_open,
             # Variables
             "hackathon_name": settings.HACKATHON_NAME,
             "hss_url": settings.HSS_URL,
             "registration_open_date": settings.REGISTRATION_OPEN_DATE,
             "registration_close_date": settings.REGISTRATION_CLOSE_DATE,
+            "application_open_date": settings.APPLICATION_OPEN_DATE,
             "event_start_date": settings.EVENT_START_DATE,
             "event_end_date": settings.EVENT_END_DATE,
             "waitlisted_acceptance_start_time": settings.WAITLISTED_ACCEPTANCE_START_TIME,
@@ -37,6 +48,7 @@ def environment(**options):
             "chat_room_link": settings.CHAT_ROOM[1],
             "using_teams": settings.TEAMS,
             "using_rsvp": settings.RSVP,
+            "sign_in_times": settings.SIGN_IN_TIMES,
         }
     )
     return env
