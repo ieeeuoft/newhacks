@@ -8,7 +8,7 @@ on:
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
-  STACK_NAME: newhacks-site-2024
+  STACK_NAME: newhacks-site
 
 jobs:
   build:
@@ -49,10 +49,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - name: Set up Python 3.8
+      - name: Set up Python 3.9.21
         uses: actions/setup-python@v1
         with:
-          python-version: 3.8
+          python-version: 3.9.21
       - name: Install python dependencies
         working-directory: hackathon_site
         run: |
@@ -96,7 +96,7 @@ jobs:
           echo 'RECAPTCHA_PUBLIC_KEY=${{ secrets.RECAPTCHA_PUBLIC_KEY }}' >> .env
           echo 'RECAPTCHA_PRIVATE_KEY=${{ secrets.RECAPTCHA_PRIVATE_KEY }}' >> .env
       - name: Transfer static files to the Swarm manager
-        uses: appleboy/scp-action@v0.1.1
+        uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.SWARM_MANAGER_IP }}
           username: ${{ secrets.SSH_USER }}
