@@ -314,12 +314,12 @@ DEFAULT_FROM_EMAIL = "hello@newhacks.ca"
 CONTACT_EMAIL = DEFAULT_FROM_EMAIL
 HSS_ADMIN_EMAIL = "hardware@newhacks.ca"
 
-REGISTRATION_OPEN_DATE = datetime(2025, 3, 18, 0, 0, 0, tzinfo=TZ_INFO)
-REGISTRATION_CLOSE_DATE = datetime(2025, 3, 17, 23, 59, 0, tzinfo=TZ_INFO)
-APPLICATION_OPEN_DATE = datetime(2024, 3, 26, 0, 0, 0, tzinfo=TZ_INFO)
-EVENT_START_DATE = datetime(2025, 4, 10, 8, 0, 0, tzinfo=TZ_INFO)
-EVENT_END_DATE = datetime(2025, 10, 4, 11, 0, 0, tzinfo=TZ_INFO)
-HARDWARE_SIGN_OUT_START_DATE = datetime(2025, 4, 10, 23, 59, 0, tzinfo=TZ_INFO)
+REGISTRATION_OPEN_DATE = datetime(2025, 10, 18, 0, 0, 0, tzinfo=TZ_INFO)
+REGISTRATION_CLOSE_DATE = datetime(2025, 10, 23, 23, 59, 0, tzinfo=TZ_INFO)
+APPLICATION_OPEN_DATE = datetime(2025, 10, 18, 0, 0, 0, tzinfo=TZ_INFO)
+EVENT_START_DATE = datetime(2025, 10, 25, 8, 0, 0, tzinfo=TZ_INFO)
+EVENT_END_DATE = datetime(2025, 10, 26, 11, 0, 0, tzinfo=TZ_INFO)
+HARDWARE_SIGN_OUT_START_DATE = datetime(2025, 10, 25, 10, 23, 59, 0, tzinfo=TZ_INFO)
 HARDWARE_SIGN_OUT_END_DATE = EVENT_END_DATE
 
 RSVP_DAYS = 2
@@ -331,27 +331,27 @@ SIGN_IN_TIMES = [
     {
         "name": "sign_in",
         "description": "Hackathon Sign In",
-        "time": datetime(2024, 10, 26, 9, 0, 0, tzinfo=TZ_INFO),  # Oct 25th @ 9am
+        "time": datetime(2025, 10, 25, 9, 0, 0, tzinfo=TZ_INFO),  # Oct 25th @ 9am
     },
     {
         "name": "lunch1",
         "description": "Lunch Day 1",
-        "time": datetime(2024, 10, 26, 12, 0, 0, tzinfo=TZ_INFO),  # Oct 25th @ 12pm
+        "time": datetime(2025, 10, 25, 12, 0, 0, tzinfo=TZ_INFO),  # Oct 25th @ 12pm
     },
     {
         "name": "dinner1",
         "description": "Dinner Day 1",
-        "time": datetime(2024, 10, 26, 18, 0, 0, tzinfo=TZ_INFO),  # Oct 25th @ 6pm
+        "time": datetime(2025, 10, 25, 18, 0, 0, tzinfo=TZ_INFO),  # Oct 25th @ 6pm
     },
     {
         "name": "breakfast2",
         "description": "Breakfast Day 2",
-        "time": datetime(2024, 10, 27, 8, 0, 0, tzinfo=TZ_INFO),  # Oct 26th @ 8am
+        "time": datetime(2025, 10, 26, 8, 0, 0, tzinfo=TZ_INFO),  # Oct 26th @ 8am
     },
     {
         "name": "lunch2",
         "description": "Lunch Day 2",
-        "time": datetime(2024, 10, 27, 11, 45, 0, tzinfo=TZ_INFO),  # Oct 26th @ 11:45pm
+        "time": datetime(2025, 10, 26, 11, 45, 0, tzinfo=TZ_INFO),  # Oct 26th @ 11:45pm
     },
 ]
 
