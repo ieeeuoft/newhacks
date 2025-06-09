@@ -41,6 +41,11 @@
                     {# Update this logic if your event ends in a different month or year #}
                     {{ localtime(event_start_date).strftime("%B %-d") }}-{{ localtime(event_end_date).strftime("%-d, %Y") }}
                 </h5>
+                <button
+                    class="btn-small waves-effect waves-light colorBtn"
+                    onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSeTY-kA-jFGeCOZ1-svysBWi7uodIfK7dIJTUjxWGTawrdlmQ/viewform?usp=dialog', '_blank')">
+                    Fill Out An Interest Form Here!
+                </button>
             </div>
             <div class="row">
                 {% if request.user.is_authenticated %}
