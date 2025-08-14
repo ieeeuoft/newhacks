@@ -62,6 +62,7 @@ python manage.py migrate
 
 ```bash
 # Compile SCSS to CSS
+yarn install
 yarn run scss
 
 # Watch for SCSS changes (optional)
@@ -75,7 +76,9 @@ yarn run scss-watch
 python manage.py runserver
 
 # In separate terminal - Start Hardware Signout System (HSS)
+conda activate ieee-newhacks
 cd hackathon_site/dashboard/frontend
+yarn install
 nvm use 16
 yarn run start
 ```
