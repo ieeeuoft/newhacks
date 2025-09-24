@@ -133,7 +133,7 @@ class ApplicationInline(admin.TabularInline):
         "what_past_experience",
         "why_participate",
         "what_technical_experience",
-        "what_role_in_team_setting",
+        "fun_question",
     )
 
     def get_user_full_name(self, obj):

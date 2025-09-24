@@ -151,7 +151,7 @@ class ApplicationForm(forms.ModelForm):
             "what_past_experience",
             "why_participate",
             "what_technical_experience",
-            "what_role_in_team_setting",
+            "fun_question",
             "discovery_method",
             "conduct_agree",
             "logistics_agree",
@@ -209,10 +209,10 @@ class ApplicationForm(forms.ModelForm):
                     "data-length": 1000,
                 }
             ),
-            "what_role_in_team_setting": forms.Textarea(
+            "fun_question": forms.Textarea(
                 attrs={
                     "class": "materialize-textarea",
-                    "placeholder": "I take on the role of...",
+                    "placeholder": "I want to build...",
                     "data-length": 1000,
                 }
             ),
