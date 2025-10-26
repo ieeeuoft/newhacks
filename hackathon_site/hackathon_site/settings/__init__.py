@@ -318,7 +318,7 @@ REGISTRATION_OPEN_DATE = datetime(2025, 9, 29, 0, 0, 0, tzinfo=TZ_INFO)
 REGISTRATION_CLOSE_DATE = datetime(2025, 10, 11, 23, 59, 0, tzinfo=TZ_INFO)
 APPLICATION_OPEN_DATE = datetime(2025, 9, 29, 0, 0, 0, tzinfo=TZ_INFO)
 EVENT_START_DATE = datetime(2025, 10, 25, 8, 0, 0, tzinfo=TZ_INFO)
-EVENT_END_DATE = datetime(2025, 10, 26, 11, 0, 0, tzinfo=TZ_INFO)
+EVENT_END_DATE = datetime(2025, 10, 26, 17, 0, 0, tzinfo=TZ_INFO)
 HARDWARE_SIGN_OUT_START_DATE = datetime(2025, 10, 25, 10, 23, 59, 0, tzinfo=TZ_INFO)
 HARDWARE_SIGN_OUT_END_DATE = EVENT_END_DATE
 
@@ -351,7 +351,7 @@ SIGN_IN_TIMES = [
     {
         "name": "lunch2",
         "description": "Lunch Day 2",
-        "time": datetime(2025, 10, 26, 11, 45, 0, tzinfo=TZ_INFO),  # Oct 26th @ 11:45pm
+        "time": datetime(2025, 10, 26, 11, 45, 0, tzinfo=TZ_INFO),  # Oct 26th @ 11:45am
     },
 ]
 
